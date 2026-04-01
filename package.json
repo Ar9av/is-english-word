@@ -1,6 +1,6 @@
 {
   "name": "fast-is-english-word",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Blazingly fast English word lookup using xor filters. 42M ops/s, 270 KB, zero dependencies.",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -8,6 +8,14 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "browser": {
+        "types": "./dist/browser.d.ts",
+        "default": "./dist/browser.js"
+      },
+      "worker": {
+        "types": "./dist/browser.d.ts",
+        "default": "./dist/browser.js"
+      },
       "import": {
         "types": "./dist/index.d.ts",
         "default": "./dist/index.js"
@@ -15,9 +23,14 @@
       "require": {
         "types": "./dist/index.d.cts",
         "default": "./dist/index.cjs"
+      },
+      "default": {
+        "types": "./dist/browser.d.ts",
+        "default": "./dist/browser.js"
       }
     }
   },
+  "browser": "./dist/browser.js",
   "files": [
     "dist",
     "data",
