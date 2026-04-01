@@ -1,7 +1,7 @@
 {
   "name": "fast-is-english-word",
-  "version": "1.0.0",
-  "description": "Blazingly fast English word lookup using a compact bloom filter. Zero dependencies.",
+  "version": "1.0.1",
+  "description": "Blazingly fast English word lookup using xor filters. 42M ops/s, 270 KB, zero dependencies.",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -20,7 +20,8 @@
   },
   "files": [
     "dist",
-    "data"
+    "data",
+    "README.md"
   ],
   "scripts": {
     "build:filter": "node scripts/build-filter.mjs",
@@ -38,7 +39,7 @@
     "dictionary",
     "spell",
     "check",
-    "bloom-filter",
+    "xor-filter",
     "fast",
     "lightweight"
   ],
