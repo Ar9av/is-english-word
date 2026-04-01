@@ -1,5 +1,5 @@
 {
-  "name": "is-english-word",
+  "name": "fast-is-english-word",
   "version": "1.0.0",
   "description": "Blazingly fast English word lookup using a compact bloom filter. Zero dependencies.",
   "type": "module",

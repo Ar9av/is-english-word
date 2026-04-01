@@ -1,4 +1,4 @@
-# is-english-word
+# fast-is-english-word
 
 Blazingly fast English word lookup. **~42M ops/s**, **270 KB** on npm, zero runtime dependencies.
 
@@ -7,13 +7,13 @@ Uses an [xor filter](https://arxiv.org/abs/1912.08258) — a space-efficient pro
 ## Install
 
 ```bash
-npm install is-english-word
+npm install fast-is-english-word
 ```
 
 ## Usage
 
 ```js
-import { isWord } from "is-english-word";
+import { isWord } from "fast-is-english-word";
 
 isWord("hello");     // true
 isWord("world");     // true
@@ -87,7 +87,7 @@ npm run build
 
 | Package | Approach | Size | Lookup |
 |---------|----------|------|--------|
-| **is-english-word** | Xor filter | **270 KB** | **24 ns** |
+| **fast-is-english-word** | Xor filter | **270 KB** | **24 ns** |
 | `an-array-of-english-words` | JSON array | 3.4 MB | ~ms (linear scan) |
 | `word-list` | Text file | 2.8 MB | user builds own |
 | `check-if-word` | Giant regex | 39.6 MB | slow |
