@@ -1,0 +1,55 @@
+{
+  "name": "is-english-word",
+  "version": "1.0.0",
+  "description": "Blazingly fast English word lookup using a compact bloom filter. Zero dependencies.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "data"
+  ],
+  "scripts": {
+    "build:filter": "node scripts/build-filter.mjs",
+    "build:filter:xor8": "node scripts/build-filter.mjs --bits=8",
+    "build:filter:xor16": "node scripts/build-filter.mjs --bits=16",
+    "build": "tsup",
+    "prebuild": "node scripts/build-filter.mjs",
+    "test": "vitest run",
+    "bench": "node --import tsx bench/index.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "english",
+    "word",
+    "dictionary",
+    "spell",
+    "check",
+    "bloom-filter",
+    "fast",
+    "lightweight"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  },
+  "sideEffects": false
+}
